@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="assets/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password</title>
+</head>
+<body>
+
+    <h2>Form Login</h2>
+    <br>
+    <form action="">
+        <label for="username"><h4>Username</h4></label>
+        <input type="text">
+        <br> <br>
+        <label for="password"><h4>Password</h4></label>
+        <input type="password" class="pass">
+        <br><br>
+        <input type="checkbox" class="cbox"> Show password
+        <br><br>
+        <button>Login</button>
+    </form>
+    
+    <script>
+        $(document).ready(function(){
+            $('.cbox').click(function(){
+                if ($(this).is(':checked')) {
+                    $('.pass').attr('type', 'text');
+                } 
+                else {
+                    $('.pass').attr('type', 'password');
+                }
+                
+            });
+        });
+    </script>
+</body>
+</html>
